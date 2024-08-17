@@ -29,7 +29,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/davidfig/pixi-viewport.git"
+        "url": "https://github.com/TrueBuiltSoftware/pixi-viewport.git"
     },
     "keywords": [
         "PIXI",

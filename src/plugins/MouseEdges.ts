@@ -158,6 +158,8 @@ export class MouseEdges extends Plugin
         const x = event.global.x;
         const y = event.global.y;
 
+        const wasScrolling = this.horizontal !== 0 || this.vertical !== 0;
+
         if (this.radiusSquared)
         {
             const center = this.parent.toScreen(this.parent.center);
@@ -220,6 +222,20 @@ export class MouseEdges extends Plugin
                 this.decelerateVertical();
                 this.vertical = 0;
             }
+        }
+
+        const isScrolling = this.horizontal !== 0 || this.vertical !== 0;
+
+        if (!wasScrolling && isScrolling) {
+            this.parent.emit('mouse-edge-start', {
+                viewport: this.parent,
+                type: 'mouse-edges',
+            });
+        } else if (wasScrolling && !isScrolling) {
+            this.parent.emit('mouse-edge-end', {
+                viewport: this.parent,
+                type: 'mouse-edges',
+            });
         }
 
         return false;

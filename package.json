@@ -32,7 +32,8 @@
         "url": "https://github.com/TrueBuiltSoftware/pixi-viewport.git"
     },
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
+        "registry": "https://npm.pkg.github.com",
+        "access": "public"
     },
     "keywords": [
         "PIXI",

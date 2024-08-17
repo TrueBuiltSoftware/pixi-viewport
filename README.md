@@ -122,14 +122,14 @@ viewport.plugins.add('name', plugin, index)
 ## Tests
 
 1. Clone repository
-2. yarn install
+2. yarn install --force
 3. yarn test (for Mocha test code)
 4. yarn coverage (for Instanbul coverage)
 
 ## Development Recipe
 
 1. clone repository
-2. yarn install
+2. yarn install --force
 3. yarn dev
 4. open browser to http://localhost:5173
 
